@@ -5,6 +5,8 @@
 
 
 --Criando tabela das informações dos clientes
+IF OBJECT ID ('Bronze.crm_cust_info' , 'U') IS NOT NULL
+	DROP Bronze.crm_cust_info
 CREATE TABLE Bronze.crm_cust_info(
 	cst_id INT,
 	cst_key NVARCHAR(50),
@@ -16,6 +18,8 @@ CREATE TABLE Bronze.crm_cust_info(
 );
 
 --Criando tabela das informações dos produtos
+IF OBJECT ID ('Bronze.crm_prd_info' , 'U') IS NOT NULL
+	DROP Bronze.crm_prd_info
 CREATE TABLE Bronze.crm_prd_info(
 	prd_id INT,
 	prd_key NVARCHAR(50),
@@ -27,6 +31,8 @@ CREATE TABLE Bronze.crm_prd_info(
 );
 
 --Criando tabela dos detalhes das vendas
+IF OBJECT ID ('Bronze.crm_sales_details' , 'U') IS NOT NULL
+	DROP Bronze.crm_sales_details
 CREATE TABLE Bronze.crm_sales_details(
 	sls_ord_num NVARCHAR(50),
 	sls_prd_key NVARCHAR(50),
@@ -40,6 +46,8 @@ CREATE TABLE Bronze.crm_sales_details(
 );
 
 --Tabela dos clientes
+IF OBJECT ID ('Bronze.erp_CUST' , 'U') IS NOT NULL
+	DROP Bronze.erp_CUST
 CREATE TABLE Bronze.erp_CUST(
 	CID NVARCHAR(50),
 	BDATE DATE,
@@ -47,12 +55,16 @@ CREATE TABLE Bronze.erp_CUST(
 );
 
 --Tabela dos países dos clientes
+IF OBJECT ID ('Bronze.erp_LOC' , 'U') IS NOT NULL
+	DROP Bronze.erp_LOC
 CREATE TABLE Bronze.erp_LOC(
 	CID NVARCHAR(50),
 	COUNTRY NVARCHAR(50)
 );
 
 --Tabela das especificações dos produtos
+IF OBJECT ID ('Bronze.erp_PX_CAT' , 'U') IS NOT NULL
+	DROP Bronze.erp_PX_CAT
 CREATE TABLE Bronze.erp_PX_CAT(
 	ID NVARCHAR(50),
 	CAT NVARCHAR(50),
