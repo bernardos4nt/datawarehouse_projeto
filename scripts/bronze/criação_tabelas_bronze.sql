@@ -42,7 +42,7 @@ CREATE TABLE Bronze.crm_sales_details(
 	sls_due_dt INT,
 	sls_sales INT,
 	sls_quantity INT,
-	ss_price INT
+	sls_price INT
 );
 
 --Tabela dos clientes
